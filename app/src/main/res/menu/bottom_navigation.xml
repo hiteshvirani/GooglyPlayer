@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/id_all_videosNav"
+        android:title="@string/all_videos"
+        android:icon="@drawable/ic_all_videos"/>
+    <item android:id="@+id/id_all_foldersNav"
+        android:title="@string/all_folders"
+        android:icon="@drawable/ic_all_folders"/>
+</menu>

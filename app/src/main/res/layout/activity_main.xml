@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:background="?attr/themeColor"
+    tools:openDrawer="start">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/id_fragmentFL"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/id_bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:itemIconTint="?attr/icon_color_as_theme"
+            app:backgroundTint="?attr/themeColor"
+            app:itemRippleColor="?attr/text_color_as_theme"
+            app:itemTextAppearanceActive="@color/black"
+            app:itemTextAppearanceInactive="@android:color/darker_gray"
+            app:itemTextColor="?attr/text_color_as_theme"
+            app:menu="@menu/bottom_navigation" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/id_navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?attr/themeColor"
+        android:fitsSystemWindows="true"
+        app:itemIconTint="?attr/icon_color_as_theme"
+        app:headerLayout="@layout/navigation_header"
+        app:itemRippleColor="?attr/text_color_as_theme"
+        app:itemTextColor="?attr/text_color_as_theme"
+        app:menu="@menu/navigation_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
